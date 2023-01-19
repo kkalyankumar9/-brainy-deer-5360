@@ -202,6 +202,30 @@ a{
     display: block;
 }
 
+.row2{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 2%;
+}
+.row2>div{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+.row2>div>a{
+    color: black;
+}
+.row2>div>a img{
+    width: 65px;
+    height: 65px;
+}
+
+
+
 
 
 
