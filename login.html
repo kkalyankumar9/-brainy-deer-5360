@@ -18,7 +18,7 @@
             margin: auto;
             padding-top:0%;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-            display: none;
+            
             
         }
         .login1{
@@ -185,7 +185,7 @@
     </style>
 </head>
 <body>
-    <div class="login ">
+    <div class="login">
         <div class="login1">
             <h2>Login</h2>
             <p>Get access to your </p>
@@ -259,9 +259,10 @@ signup.addEventListener("click",function(){
     
 })
 regis.addEventListener("click",function(){
-    formlogin.style.display="block"
-    formsignup.style.display="none"
-   // alert("signup")
+   // formlogin.style.display="block"
+    formsignup.style.visibility="hidden"
+  // alert("signup")
+   console.log("hi")
     
 })
 
