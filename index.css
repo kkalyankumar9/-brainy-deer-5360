@@ -8,7 +8,8 @@
     justify-content: center;
     align-items: center;
     padding: 10px 0px;
-   
+    position: sticky;
+    z-index: 0px;
 
 }
 .mn1{
@@ -223,6 +224,122 @@ a{
     width: 65px;
     height: 65px;
 }
+.poster{
+    display: flex;
+    
+    margin-top: 25px;
+    width: 100%;
+}
+
+.poster img{
+    width: 100%;
+    height: 140%;
+    
+    
+}
+
+.bnt1 .bnt2{
+    justify-items: center;
+
+}
+.bnt1{
+   
+    padding: 1%;
+    height: 100px;
+    margin-top: 100px;
+    position: relative;
+
+
+}
+.bnt2{
+
+   
+   /* left: -4690px;*/
+    position: relative;
+    padding: 1%;
+    height: 100px;
+    margin-top: 100px;
+
+
+    
+}
+.imgslider{
+    display: flex;
+    margin-bottom: 50px;
+}
+.row3{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+.row3 div{
+    
+    width: 370px;
+    height:180px ;
+
+}
+.r3{
+    padding: 2%;
+    width: 370px;
+    height: 180px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+
+}
+.row4{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-bottom: 20px;
+
+
+    
+}
+.row4>a>img{
+    width: 90%;
+    height: 100%
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+}
+.row5{
+    display: flex;
+    width: 100%;
+    margin-left: 20px;
+    gap:20px 20px;
+    margin-bottom: 20px;
+}
+.row5>div{
+    border:1px solid yellow;
+    width: 23%;
+    height: 150px;
+    background-color: rgb(249, 249, 156);
+    text-align: center;
+
+    
+
+}
+.row5>div div{
+    border: 0px solid red;
+    width: 50%;
+    border-radius: 45%;
+    justify-content: center;
+    text-align: center;  
+    padding: 5%;
+    margin:  15%;
+    margin-left: 20%;
+    color:white;
+    background-color: green;
+    
+}
+.pr1{
+    color:white;
+}
+
 
 
 
