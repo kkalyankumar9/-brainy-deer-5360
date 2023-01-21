@@ -7,19 +7,253 @@
     <title>Document</title>
     <link rel="stylesheet" href="product.html">
     <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="index.css"> 
+</head>
+<style>
+    
+   .con1{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2%;
+
+    }
+    .pri1{
+        width: 300px;
+        height: 320px;
+        border: 1px solid red ;
+    }
+    .pri1 h2,p,h3{
+        border-bottom:1px solid gainsboro ;
+        
+        padding: 3%;
+    }
+    .pri1>p span{
+        text-align: right;
+    }
+    #dis,#save{
+        color: green;
+    }
+    #p3{
+        font-size: 25px;
+        border-bottom:none ;
+    }
+    .po{
+        
+        width: 300px;
+        height: 50px;
+        background-color:rgb(255, 115, 0);
+        border: none;
+        outline: none;
+    
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+    #placed{
+        margin-top: 100px;
+    }
+
+    #con{
+        display: flex;
+    }
 
     
-</head>
+</style>
 <body>
-<div id="con"></div>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="">
+            
+            <img class="mn1" src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt="error"/>
+        </a>
+        <a href="" >
+            <p class="ex">
+                Explore
+                <span class="plus">
+                    Plus
+                </span>
+                <img class="mn2" src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png" alt="error"/>
+            </p>
+        </a>
+        </div>
+        <div class="search">
+            <input type="search" placeholder="Search for Products, brands and more">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="searcheffect">
+                <div class="recentse">
+                    <i class="fa-solid fa-clock-rotate-left" ></i>
+                    <p>keyboard wirless</p>
+                </div>
+                <p class="p1">Discover more</p>
+                <div class="recentse">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>keyboard wirless</p>
+                </div>
+                <div class="recentse">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>keyboard wirless</p>
+                </div>
+                <div class="recentse">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>keyboard wirless</p>
+                </div>
+                <div class="recentse">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>keyboard wirless</p>
+                </div>
+                <div class="recentse">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>keyboard wirless</p>
+                </div>
+            </div>
+
+        </div>
+        <button class="bn1" >
+            <a href="/login.html" class="bn">Login</a>
+            <div class="login">
+                <div class="signup">
+                    <p>New customer? </p>
+                    <a href="./register.html"><p class="s1">Sign Up</p></a>
+                </div>
+                <div class="signup1">
+                    <i class="fa-solid fa-user" ></i>
+                    <a href=""> My Profile </a>
+                </div>
+                <div class="signup1">
+                    <i class="fa-solid fa-plus" ></i>
+                    <a href="">Filpkart Plus Zone</a>
+                </div>
+                <div class="signup1">
+                    <i class="fa-solid fa-file-arrow-down" ></i>
+                    <a href="">Orders</a>
+                </div>
+                <div class="signup1">
+                    <i class="fa-solid fa-heart" ></i>
+                    <a href=""> Wishlist</a>
+                </div>
+                <div class="signup1">
+                    <i class="fa-solid fa-pager"></i>
+                    <a href="">Rewards</a>
+                </div>
+                <div class="signup1">
+                    <i class="fa-solid fa-gift" ></i>
+                    <a href="">Gift Cards</a>
+                </div>
+            </div>
+        </button>
+
+        
+        <a href="" class="nava1"> Become a Seller</a>
+        <a href="" class="nava2" class="ma">
+            More
+            <i class="fa-solid fa-angle-down" id="moredown"></i>
+            <div class="more">
+                <div class="moreicon">
+                    <i class="fa-solid fa-bell"></i>
+                    <p>Notification Preference</p>
+                </div>
+                <div class="moreicon">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <p>24*7 Customer care</p>
+                </div>
+                <div class="moreicon">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    <p>Advertise</p>
+                </div>
+                <div class="moreicon">
+                    <i class="fa-solid fa-download"></i>
+                    <p>Download App</p>
+                </div>
+
+            </div>
+        </a>
+        <a href="/cart.html" class="nava3">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Cart
+        </a>
+
+    </nav>
+<div class="con1">
+    <div id="con"></div>
+    
+
+            <div class="pri1">
+                <h2>PRICE DETAILS</h2>
+                <P>Price(<span></span>items):₹<span id="tp1"></span></P>
+                <p>Discount:-₹<span id="dis" ></span></p>
+                <p>Delivery Charges:₹<span id="dl"></span></p>
+                <h3>Total Amount:₹<span id="tp2"></span></h3>
+                <p id="p3">You will save ₹<span id="save"></span>on this order</p>
+                <div id="placed">
+                    <button class="po"> PLACE ORDER</button>
+                </div>
+            </div>
+
+</div>
+   
 </body>
 </html>
 <script>
    let cartdata=JSON.parse(localStorage.getItem("cart")) || []
    displaydata(cartdata)
+   
+   let placed_order=document.querySelector(".po");
+   placed_order.addEventListener("click",()=>{
+    alert("Order Placed")
+    
+   })
+    
+
+    
    function displaydata(data){
         let container=document.querySelector("#con")
         container.innerHTML=null;
+        let total=document.querySelector("#tp1");
+    
+    let temp=0;
+    data.forEach((e)=>{
+        temp+=e.price*e.quantity
+    })
+    console.log(temp)
+    total.textContent=temp;
+    //total amount after discount and discount amount//
+    let total_afterdis=document.querySelector("#tp2")
+    let disc=document.querySelector("#dis")
+    let deli=document.querySelector("#dl")
+    let saveamount=document.querySelector("#save")
+
+
+
+    //total price with discount//
+// 15% discount >=50000,10% discount>=30000 and 5% discount>=15000//
+let afterdisc,discount,delivery=65;
+
+    if(temp>=50000){
+        discount=Math.floor(0.15*temp);
+        afterdisc=Math.floor(temp-discount+delivery)
+        
+    }else if(temp>=30000){
+        discount=Math.floor(0.10*temp);
+        afterdisc=Math.floor(temp-discount+delivery)
+
+    }else if(temp>=15000){
+        discount=Math.floor(0.05*temp);
+        afterdisc=Math.floor(temp-discount+delivery)
+
+
+    }
+
+    //display//
+    total_afterdis.textContent=afterdisc;
+    disc.textContent=discount
+    deli.textContent=delivery
+    saveamount.textContent=discount
+
+
+
+
+        
+
 
         data.forEach((e,i)=>{
             let div=document.createElement("div");
@@ -31,15 +265,42 @@
                 description.textContent=e.description;
             let price=document.createElement("h2");
                 price.textContent=e.price
+            let quantity=document.createElement("span");
+                quantity.textContent=e.quantity
+            
+            let increment=document.createElement("button")
+                increment.textContent="+";
+            let decrement=document.createElement("button")
+                decrement.textContent="-"
             let remove=document.createElement("button");
                 remove.textContent="Remove"
-            
-            div.append(image,brand,description,price,remove);
+            div.append(image,brand,description,price,remove,quantity,increment,decrement);
             container.append(div)
             remove.addEventListener("click",function(){
-                data.splice(i,1)
-                displaydata(data)
+                cartdata=cartdata.filter((ele)=>{
+                    return ele.id!==e.id
+                })
+                //data.splice(i,1)
+                displaydata(cartdata)
                 localStorage.setItem("cart",JSON.stringify(cartdata))
+
+            })
+            increment.addEventListener("click",()=>{
+                e=e.quantity++
+                displaydata(cartdata)
+                localStorage.setItem("cart",JSON.stringify(cartdata))
+
+
+            })
+            decrement.addEventListener("click",()=>{
+                if(e.quantity>1){
+                    e=e.quantity--
+                displaydata(cartdata)
+                localStorage.setItem("cart",JSON.stringify(cartdata))
+
+                }
+               
+
 
             })
 

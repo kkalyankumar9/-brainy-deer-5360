@@ -312,7 +312,7 @@
             let description=document.createElement("p");
                 description.textContent=e.description;
             let price=document.createElement("h2");
-                price.textContent=e.price
+                price.textContent=e.price;
             let addtocart=document.createElement("button");
                 addtocart.textContent="Add to Cart"
             let buynow=document.createElement("button");
@@ -328,7 +328,7 @@
                 }
                 else{
                     alert("Added to cart")
-                    cartdata.push(e)
+                    cartdata.push({...e,quantity:1})
                 localStorage.setItem("cart",JSON.stringify(cartdata))
 
                 }
