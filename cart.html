@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product.html">
+    <link rel="stylesheet" href="index.html">
+
+    
+</head>
+<body>
+<div id="con"></div>
+</body>
+</html>
+<script>
+   let cartdata=JSON.parse(localStorage.getItem("cart")) || []
+   displaydata(cartdata)
+   function displaydata(data){
+        let container=document.querySelector("#con")
+        container.innerHTML=null;
+
+        data.forEach((e,i)=>{
+            let div=document.createElement("div");
+            let image=document.createElement("img");
+                image.setAttribute("src",e.image)
+            let brand=document.createElement("h2");
+                brand.textContent=e.brand;
+            let description=document.createElement("p");
+                description.textContent=e.description;
+            let price=document.createElement("h2");
+                price.textContent=e.price
+            let remove=document.createElement("button");
+                remove.textContent="Remove"
+            
+            div.append(image,brand,description,price,remove);
+            container.append(div)
+            remove.addEventListener("click",function(){
+                data.splice(i,1)
+                displaydata(data)
+                localStorage.setItem("cart",JSON.stringify(cartdata))
+
+            })
+
+        })
+    }
+    
+
+    
+</script>

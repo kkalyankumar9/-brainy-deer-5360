@@ -5,10 +5,280 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="cart.html">
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        .nav2{
+            display: flex;
+            justify-content: space-around;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            height: 50px;
+            align-items: center;
+            margin-bottom: 10px;
+
+        }
+        .nav2>div>a{
+            text-decoration: none;
+            color: black;
+        }
+        .pro1{
+            display: flex;
+        }
+        #data1{
+            width: 22%;
+
+        }
+        #con{
+            width: 75%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        .text1{
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+        }
+        .text1 p{
+            color: gray;
+            padding: 5px;
+
+            
+        }
+        .text1 a{
+            font-size: 13px;
+            padding: 5px;
+
+        }
+        #data1 {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            margin-left: 10px;
+            padding: 3%;
+            
+        
+
+
+        }
+        #data1 h3{
+            padding: 3%;
+            border-bottom: 1px solid gainsboro;
+        }
+
+    </style>
+
 </head>
 <body>
     <div>
-    <div id="con"></div>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="">
+                
+                <img class="mn1" src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt="error"/>
+            </a>
+            <a href="" >
+                <p class="ex">
+                    Explore
+                    <span class="plus">
+                        Plus
+                    </span>
+                    <img class="mn2" src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png" alt="error"/>
+                </p>
+            </a>
+            </div>
+            <div class="search">
+                <input type="search" placeholder="Search for Products, brands and more">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="searcheffect">
+                    <div class="recentse">
+                        <i class="fa-solid fa-clock-rotate-left" ></i>
+                        <p>keyboard wirless</p>
+                    </div>
+                    <p class="p1">Discover more</p>
+                    <div class="recentse">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <p>keyboard wirless</p>
+                    </div>
+                    <div class="recentse">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <p>keyboard wirless</p>
+                    </div>
+                    <div class="recentse">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <p>keyboard wirless</p>
+                    </div>
+                    <div class="recentse">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <p>keyboard wirless</p>
+                    </div>
+                    <div class="recentse">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <p>keyboard wirless</p>
+                    </div>
+                </div>
+    
+            </div>
+            <button class="bn1" >
+                <a href="/login.html" class="bn">Login</a>
+                <div class="login">
+                    <div class="signup">
+                        <p>New customer? </p>
+                        <a href=""><p class="s1">Sign Up</p></a>
+                    </div>
+                    <div class="signup1">
+                        <i class="fa-solid fa-user" ></i>
+                        <a href=""> My Profile </a>
+                    </div>
+                    <div class="signup1">
+                        <i class="fa-solid fa-plus" ></i>
+                        <a href="">Filpkart Plus Zone</a>
+                    </div>
+                    <div class="signup1">
+                        <i class="fa-solid fa-file-arrow-down" ></i>
+                        <a href="">Orders</a>
+                    </div>
+                    <div class="signup1">
+                        <i class="fa-solid fa-heart" ></i>
+                        <a href=""> Wishlist</a>
+                    </div>
+                    <div class="signup1">
+                        <i class="fa-solid fa-pager"></i>
+                        <a href="">Rewards</a>
+                    </div>
+                    <div class="signup1">
+                        <i class="fa-solid fa-gift" ></i>
+                        <a href="">Gift Cards</a>
+                    </div>
+                </div>
+            </button>
+    
+            
+            <a href="" class="nava1"> Become a Seller</a>
+            <a href="" class="nava2" class="ma">
+                More
+                <i class="fa-solid fa-angle-down" id="moredown"></i>
+                <div class="more">
+                    <div class="moreicon">
+                        <i class="fa-solid fa-bell"></i>
+                        <p>Notification Preference</p>
+                    </div>
+                    <div class="moreicon">
+                        <i class="fa-solid fa-circle-question"></i>
+                        <p>24*7 Customer care</p>
+                    </div>
+                    <div class="moreicon">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        <p>Advertise</p>
+                    </div>
+                    <div class="moreicon">
+                        <i class="fa-solid fa-download"></i>
+                        <p>Download App</p>
+                    </div>
+    
+                </div>
+            </a>
+            <a href="/cart.html" class="nava3">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+            </a>
+    
+        </nav>
+        <nav class="nav2">
+            <div>
+                <a href="">Electronics</a>
+
+
+            </div>
+            <div>
+                <a href="">TVs & Application</a>
+
+            </div>
+            <div>
+                <a href="">Men-Women</a>
+
+            </div>
+            <div>
+                <a href="">Baby & Kids</a>
+
+            </div>
+            <div>
+                <a href="">Home & Furniture</a>
+
+            </div>
+            <div>
+                <a href="">Sports, Books & More</a>
+
+            </div>
+            <div>
+                <a href="">Flights</a>
+
+            </div>
+            <div>
+                <a href="">Offers Zone</a>
+
+            </div>
+            <div>
+                <a href="">Grocery</a>
+
+            </div>
+        </nav>
+        <div class="text1">
+            <h3>Mobile Phones</h3>
+            <p>Mobile phones are no more merely a part of our lives. Whether it's to stay connected with friends and family or to keep abreast of important developments around the world, mobiles are no longer for sending a text or making a call. From budget to state-of-the-art smartphones; indigenous names to global big-wigs - a whole universe of mobiles await you on Flipkart. Whether you’re looking for waterdrop notch screens, a high screen to body ratio, AI-powered sensational cameras, high storage capacity, blazing quick processing engines or reflective glass designs, rest assured you won’t have to venture anywhere else for your smartphone needs. The information you are reading has been last updated on 21-Jan-23. </p>
+            <a href="">
+                Nothing Phone 1 | Google Pixel 6A | vivo T1X | OPPO Reno 8 Pro 5G |  OPPO Reno7 Pro 5G | OPPO Reno7 5G | iPhone 13 | iPhone 13 Pro | iPhone 13 Pro Max | iPhone 13 Mini | iPhone 12 |</a>
+        </div>
+        <div class="pro1">
+
+            <div id="data1"> 
+                <h3>Fliters
+                    <i class="fa-solid fa-angle-down"></i>
+                </h3>
+                <h3>Categories
+                    <i class="fa-solid fa-angle-down"></i>
+                </h3>
+                <h3>price
+                    <i class="fa-solid fa-angle-down"></i>
+                </h3>
+                <h3>Brand
+                    <i class="fa-solid fa-angle-down"></i>
+                </h3>
+                <h3>Customer Rating
+                    <i class="fa-solid fa-angle-down"></i>
+                </h3>
+                <h3>GST Invoice available
+                    <i class="fa-solid fa-angle-down"></i>
+                </h3>
+                <h3>RAM
+                    <i class="fa-solid fa-angle-down"></i>
+                </h3>
+                <h3>Internal Storage
+                    <i class="fa-solid fa-angle-down"></i>
+                </h3>
+                <h3>Battery Capacity
+                    <i class="fa-solid fa-angle-down"></i>
+                </h3>
+                <h3>Screen size
+                    <i class="fa-solid fa-angle-down"></i>
+                </h3>
+                <h3>Primary Camera
+                    <i class="fa-solid fa-angle-down"></i>
+                </h3>
+                <h3>Secordary Camera
+                    <i class="fa-solid fa-angle-down"></i>
+                </h3>
+                <h3> 
+                    Processor
+                    <i class="fa-solid fa-angle-down"></i>
+                </h3>
+
+
+
+            </div>
+            <div id="con"></div>
+
+
+        </div>
 </div>
     
 </body>
@@ -20,7 +290,7 @@
             let fetchdata= await fetch("https://63ca96534f53a00420268cd6.mockapi.io/product")
             fetchdata=await fetchdata.json()
             console.log(fetchdata)
-            displaydata(fetchdata.data)
+            displaydata(fetchdata)
             
         } catch (error) {
             console.log(error)
@@ -37,10 +307,50 @@
             let div=document.createElement("div");
             let image=document.createElement("img");
                 image.setAttribute("src",e.image)
-            
+            let brand=document.createElement("h2");
+                brand.textContent=e.brand;
+            let description=document.createElement("p");
+                description.textContent=e.description;
+            let price=document.createElement("h2");
+                price.textContent=e.price
+            let addtocart=document.createElement("button");
+                addtocart.textContent="Add to Cart"
+            let buynow=document.createElement("button");
+                buynow.textContent="BUY NOW"
+            div.append(image,brand,description,price,addtocart,buynow);
             container.append(div)
-            div.append(image)
+            let cartdata=JSON.parse(localStorage.getItem("cart")) || []
+
+            addtocart.addEventListener("click",function(){
+
+                if(checkduplicate(e)){
+                    alert("Product already in Cart")
+                }
+                else{
+                    alert("Added to cart")
+                    cartdata.push(e)
+                localStorage.setItem("cart",JSON.stringify(cartdata))
+
+                }
+                
+                
+            })
+            function checkduplicate(data){
+            for(let i=0;i<=cartdata.length-1;i++){
+                    if(cartdata[i].id==data.id){
+                        return true
+
+                    }else{
+                        return false
+
+                    }
+
+                    
+                }
+        }
+
         })
+        
 
         
     }

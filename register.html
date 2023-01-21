@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+
+</head>
+<style>
+    
+</style>
+<body>
+    <div class="reg">
+        <div class="reg1">
+            <h2>Loooks like</h2>
+            <h2>you're new</h2>
+            <p>Sign up with your mobile</p>
+            <p>number to get started</p>
+            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/login_img_c4a81e.png" alt="error"/>
+    
+        </div>
+    
+        <div class="reg2">
+            <form class="signup">
+                <input type="text" placeholder=" Enter your Name" id="name">
+                <input type="email" placeholder="Enter Email/Mobile Number" id="useremail">
+                <input type="password" placeholder="Enter the Password" id="userpassword">
+                <input type="password" placeholder="Confirm Password" id="confirmpassword">
+                <button id="sub">Register</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+<script>
+    let register=document.querySelector(".signup");
+   // let button=document.querySelector("#sub")
+
+    let registerdata=JSON.parse(localStorage.getItem("login")) || []
+
+    register.addEventListener("submit",function(event){
+        event.preventDefault();
+        formdata={
+            name:register.name.value,
+            email:register.useremail.value,
+            password:register.userpassword.value,
+            confirmpassword:register.confirmpassword.value
+        }
+
+        if(formdata.name==""||formdata.email==""||formdata.password==""||formdata.confirmpassword==""){
+            alert("All the fields are Compulsory")
+        }
+        else if(formdata.password.value!==formdata.confirmpassword.value){
+            alert("passwords mismatch!")
+        }
+        else{
+            let count=0;
+            registerdata.forEach((el,i)=>{
+                if(el.email==formdata.email){
+                    count++;
+                }
+            })
+                if(count>0){
+                    alert("user already registered!")
+                }else{
+                    registerdata.push(formdata)
+                    localStorage.setItem("login",JSON.stringify(registerdata))
+
+                  alert("Resigtraation Sucessfully!")
+                   window.location.assign("./login.html")
+
+
+
+                
+
+
+                }
+            
+          
+          
+
+        }
+
+    })
+    
+
+</script>
+</html>
