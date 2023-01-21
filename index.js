@@ -8,6 +8,6 @@ setInterval(()=>{
         translate=0
     }
 
-    image.style.transform="translateX(${-translate}%)"
+    image.style.transform="translateX(${~translate}%)"
     
 },2000)
