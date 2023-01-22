@@ -20,7 +20,9 @@
     .pri1{
         width: 300px;
         height: 320px;
-        border: 1px solid red ;
+        border: 0px solid red ;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
     }
     .pri1 h2,p,h3{
         border-bottom:1px solid gainsboro ;
@@ -55,9 +57,11 @@
 
     #con{
         display: flex;
+        flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  
     }
-
-    
+  
 </style>
 <body>
     <nav class="navbar">
@@ -175,15 +179,13 @@
     </nav>
 <div class="con1">
     <div id="con"></div>
-    
-
             <div class="pri1">
                 <h2>PRICE DETAILS</h2>
                 <P>Price(<span></span>items):₹<span id="tp1"></span></P>
                 <p>Discount:-₹<span id="dis" ></span></p>
                 <p>Delivery Charges:₹<span id="dl"></span></p>
                 <h3>Total Amount:₹<span id="tp2"></span></h3>
-                <p id="p3">You will save ₹<span id="save"></span>on this order</p>
+                <p id="p3">You will save ₹ <span id="save"></span> on this order</p>
                 <div id="placed">
                     <button class="po"> PLACE ORDER</button>
                 </div>
@@ -196,14 +198,6 @@
 <script>
    let cartdata=JSON.parse(localStorage.getItem("cart")) || []
    displaydata(cartdata)
-   
-   let placed_order=document.querySelector(".po");
-   placed_order.addEventListener("click",()=>{
-    alert("Order Placed")
-    
-   })
-    
-
     
    function displaydata(data){
         let container=document.querySelector("#con")
@@ -222,38 +216,47 @@
     let deli=document.querySelector("#dl")
     let saveamount=document.querySelector("#save")
 
-
-
     //total price with discount//
-// 15% discount >=50000,10% discount>=30000 and 5% discount>=15000//
-let afterdisc,discount,delivery=65;
+// 15% discount >=50000,10% discount>=30000, 5% discount>=15000 and 2% discount>=15000//
+let afterdisc=0,discount=0,delivery=0;
 
     if(temp>=50000){
         discount=Math.floor(0.15*temp);
+        delivery=0;
         afterdisc=Math.floor(temp-discount+delivery)
-        
     }else if(temp>=30000){
         discount=Math.floor(0.10*temp);
+        delivery=65;
         afterdisc=Math.floor(temp-discount+delivery)
 
     }else if(temp>=15000){
         discount=Math.floor(0.05*temp);
+        delivery=65;
         afterdisc=Math.floor(temp-discount+delivery)
 
+    }else if(temp>=7000){
+        discount=Math.floor(0.02*temp);
+        delivery=65;
+        afterdisc=Math.floor(temp-discount+delivery)
 
+    }else{
+        afterdisc=temp
     }
 
     //display//
     total_afterdis.textContent=afterdisc;
     disc.textContent=discount
-    deli.textContent=delivery
     saveamount.textContent=discount
+    deli.textContent=delivery
 
-
-
-
-        
-
+    let placed_order=document.querySelector(".po");
+    placed_order.addEventListener("click",()=>{
+            if(temp>0){
+                alert("Order Placed")
+            }else{
+                alert("Cart is Empty!...Shop Now...")
+            }
+        })
 
         data.forEach((e,i)=>{
             let div=document.createElement("div");
@@ -300,13 +303,9 @@ let afterdisc,discount,delivery=65;
 
                 }
                
-
-
             })
 
         })
     }
-    
-
     
 </script>

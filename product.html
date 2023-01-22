@@ -33,7 +33,40 @@
         #con{
             width: 75%;
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(2,1fr);
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            width: 80%;
+            padding: 4%;
+
+
+        }
+        #con>div{
+            padding: 3%;
+            box-shadow: #00000005 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            
+            width:70%;
+            text-align: center;
+            
+        }
+        #con>div>img{
+         
+            width: 70%;
+            padding: 2%;
+
+        }
+        #con>div>button{
+            
+            width: 200px;
+            height: 30px;
+            text-align: center;
+            
+            margin-top: 20px;
+            
+            background-color: rgb(228, 157, 25);
+            color: white;
+            border: none;
+            outline: none;
+            
         }
         .text1{
             margin-top: 10px;
@@ -317,6 +350,9 @@
                 addtocart.textContent="Add to Cart"
             let buynow=document.createElement("button");
                 buynow.textContent="BUY NOW"
+                buynow.addEventListener("click",function(){
+                    alert("Order Placed")
+                })
             div.append(image,brand,description,price,addtocart,buynow);
             container.append(div)
             let cartdata=JSON.parse(localStorage.getItem("cart")) || []
