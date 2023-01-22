@@ -253,6 +253,11 @@ let afterdisc=0,discount=0,delivery=0;
     placed_order.addEventListener("click",()=>{
             if(temp>0){
                 alert("Order Placed")
+                container.style.display="none"
+                let pr1=document.querySelector(".pri1")
+                pr1.style.display="none"
+                window.location.assign("./index.html")
+                
             }else{
                 alert("Cart is Empty!...Shop Now...")
             }
